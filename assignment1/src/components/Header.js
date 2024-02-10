@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, NavLink } from "react-bootstrap";
 import Badge from "@mui/material/Badge";
 
 const Header = () => {
@@ -7,13 +7,25 @@ const Header = () => {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">
-            <span className="brand-text">Shopping Website</span>
-          </Navbar.Brand>
+          <NavLink to="/" className="text-decoration-none text-light mx-3">
+            Shopping App
+          </NavLink>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#aboutUs">About Us</Nav.Link>
-            <Nav.Link href="#login">Login</Nav.Link>
+            <NavLink href="/" className="text-decoration-none text-light mx-3">
+              Home
+            </NavLink>
+            <NavLink
+              href="/aboutUs"
+              className="text-decoration-none text-light mx-3"
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              href="/login"
+              className="text-decoration-none text-light mx-3"
+            >
+              Login
+            </NavLink>
           </Nav>
           <Badge badgeContent={4} color="primary">
             <i
