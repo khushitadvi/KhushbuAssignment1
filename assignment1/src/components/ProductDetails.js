@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table, Card, Button } from "react-bootstrap";
 
 const ProductDetails = () => {
+  const [productQuantity, setQuantityData] = useState(1);
+
+  const addQuantity = () => {
+    setQuantityData(productQuantity + 1);
+  };
+
+  const removeQuantity = () => {
+    if (productQuantity > 0) {
+      setQuantityData(productQuantity - 1);
+    }
+  };
+
   return (
     <>
       <div className="container mt-2">
@@ -62,14 +74,26 @@ const ProductDetails = () => {
                               className="mt-1 d-flex justify-content-between align-items-center"
                               style={{ width: 100, cursor: "pointer" }}
                             >
-                              <span style={{ fontSize: 24 }}>-</span>
-                              <span style={{ fontSize: 24 }}>1</span>
-                              <span style={{ fontSize: 24 }}>+</span>
+                              <span
+                                style={{ fontSize: 24 }}
+                                onClick={removeQuantity}
+                              >
+                                -
+                              </span>
+                              <span style={{ fontSize: 24 }}>
+                                {productQuantity}
+                              </span>
+                              <span
+                                style={{ fontSize: 24 }}
+                                onClick={addQuantity}
+                              >
+                                +
+                              </span>
                             </div>
                           </h4>
 
                           <h4>
-                            <strong>Total : </strong>44.55
+                            <strong>Total : </strong>-
                           </h4>
                         </center>
                       </p>
