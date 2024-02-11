@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import SIgn_img from "./SIgn_img";
+import { Nav, NavLink } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { NavLink } from "react-bootstrap";
-import Product from "./Product";
 
-const Login = () => {
+const Register = () => {
   const history = useNavigate();
 
   const [inpval, setInpval] = useState({
+    name: "",
     email: "",
+    date: "",
     password: "",
   });
 
@@ -36,16 +37,22 @@ const Login = () => {
   const addData = (e) => {
     e.preventDefault();
 
-    const getuserArr = localStorage.getItem("useryoutube");
-    console.log(getuserArr);
+    const { name, email, date, password } = inpval;
 
-    const { email, password } = inpval;
-    if (email === "") {
+    if (name === "") {
+      toast.error(" name field is requred!", {
+        position: "top-center",
+      });
+    } else if (email === "") {
       toast.error("email field is requred", {
         position: "top-center",
       });
     } else if (!email.includes("@")) {
       toast.error("plz enter valid email addres", {
+        position: "top-center",
+      });
+    } else if (date === "") {
+      toast.error("date field is requred", {
         position: "top-center",
       });
     } else if (password === "") {
@@ -57,22 +64,9 @@ const Login = () => {
         position: "top-center",
       });
     } else {
-      if (getuserArr && getuserArr.length) {
-        const userdata = JSON.parse(getuserArr);
-        const userlogin = userdata.filter((el, k) => {
-          return el.email === email && el.password === password;
-        });
-
-        if (userlogin.length === 0) {
-          alert("invalid details");
-        } else {
-          console.log("user login succesfulyy");
-
-          localStorage.setItem("user_login", JSON.stringify(userlogin));
-
-          history("/");
-        }
-      }
+      console.log("data added succesfully");
+      history("/login");
+      localStorage.setItem("useryoutube", JSON.stringify([...data, inpval]));
     }
   };
 
@@ -82,8 +76,16 @@ const Login = () => {
         <section className="d-flex justify-content-between align-items-center">
           <SIgn_img />
           <div className="left_data mt-3 p-3 " style={{ width: "100%" }}>
-            <h3 className="text-center col-lg-6">Sign IN</h3>
+            <h3 className="text-center col-lg-6">Sign Up</h3>
             <Form>
+              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+                <Form.Control
+                  type="text"
+                  name="name"
+                  onChange={getdata}
+                  placeholder="Enter Your Name"
+                />
+              </Form.Group>
               <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                 <Form.Control
                   type="email"
@@ -91,6 +93,10 @@ const Login = () => {
                   onChange={getdata}
                   placeholder="Enter email"
                 />
+              </Form.Group>
+
+              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+                <Form.Control onChange={getdata} name="date" type="date" />
               </Form.Group>
 
               <Form.Group
@@ -114,15 +120,13 @@ const Login = () => {
                 Submit
               </Button>
             </Form>
+
             <p className="mt-2" style={{ height: "10px", marginLeft: "10%" }}>
-              Don't Have an Account
+              Already Have an Account
             </p>
 
-            <NavLink
-              href="/register"
-              style={{ color: "red", marginLeft: "20%" }}
-            >
-              Sign Up
+            <NavLink href="/login" style={{ color: "red", marginLeft: "20%" }}>
+              SignIn
             </NavLink>
           </div>
         </section>
@@ -132,4 +136,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

@@ -30,20 +30,9 @@ const Header = () => {
           </NavLink>
           <Nav className="me-auto">
             <NavLink href="/" className="text-decoration-none text-light mx-3">
-              Home
-            </NavLink>
-            <NavLink
-              href="/products"
-              className="text-decoration-none text-light mx-3"
-            >
               Product
             </NavLink>
-            <NavLink
-              href="/aboutUs"
-              className="text-decoration-none text-light mx-3"
-            >
-              About Us
-            </NavLink>
+
             <NavLink
               href="/login"
               className="text-decoration-none text-light mx-3"
