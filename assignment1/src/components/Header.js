@@ -28,6 +28,12 @@ const Header = () => {
               Home
             </NavLink>
             <NavLink
+              href="/products"
+              className="text-decoration-none text-light mx-3"
+            >
+              Product
+            </NavLink>
+            <NavLink
               href="/aboutUs"
               className="text-decoration-none text-light mx-3"
             >
