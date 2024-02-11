@@ -14,9 +14,9 @@ const Product = () => {
     console.log(e);
     dispatch(ADD(e));
   };
-  //   const handleClick = () => {
-  //     window.location.href = "./ProductDetails";
-  //   };
+  const handleClick = () => {
+    window.location.href = "./ProductDetails";
+  };
 
   console.log(data);
 
