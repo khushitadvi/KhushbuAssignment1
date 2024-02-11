@@ -6,6 +6,10 @@ import "./style.css";
 const Product = () => {
   const [data] = useState(ProductsData);
 
+  const handleClick = () => {
+    window.location.href = "./ProductDetails";
+  };
+
   console.log(data);
 
   return (
@@ -48,7 +52,11 @@ const Product = () => {
                   </Card.Text>
 
                   <div className="button_div d-flex justify-content-center">
-                    <Button variant="primary" className="col-lg-12">
+                    <Button
+                      variant="primary"
+                      className="col-lg-12"
+                      onClick={handleClick}
+                    >
                       Add to Cart
                     </Button>
                   </div>
