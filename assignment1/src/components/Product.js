@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import ProductsData from "../data/ProductsData";
 import "./style.css";
+import { useDispatch } from "react-redux";
+import { ADD } from "../redux/actions/action";
 
 const Product = () => {
   const [data] = useState(ProductsData);
 
-  const handleClick = () => {
-    window.location.href = "./ProductDetails";
+  const dispatch = useDispatch();
+
+  const send = (e) => {
+    console.log(e);
+    dispatch(ADD(e));
   };
+  //   const handleClick = () => {
+  //     window.location.href = "./ProductDetails";
+  //   };
 
   console.log(data);
 
@@ -55,7 +63,7 @@ const Product = () => {
                     <Button
                       variant="primary"
                       className="col-lg-12"
-                      onClick={handleClick}
+                      onClick={() => send(element)}
                     >
                       Add to Cart
                     </Button>
