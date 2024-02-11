@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Container, NavLink, Table } from "react-bootstrap";
+import { Navbar, Nav, Container, Table, NavLink } from "react-bootstrap";
 import Badge from "@mui/material/Badge";
 import Menu from "@mui/material/Menu";
 import { useSelector } from "react-redux";
@@ -90,47 +90,44 @@ const Header = () => {
                 <tbody>
                   {getData.map((e) => {
                     return (
-                      <>
-                        <tr>
-                          <td>
-                            <NavLink href={`/productDetails/${e.id}`}>
-                              <img
-                                src={e.imgUrl}
-                                style={{
-                                  width: "5rem",
-                                  height: "5rem",
-                                  objectFit: "contain",
-                                  alt: "productImage",
-                                }}
-                              ></img>
-                            </NavLink>
-                          </td>
-                          <td>
-                            <p>{e.productName}</p>
-                            <p>Price : ${e.price}</p>
-                            <p>Quantity : {e.qnty}</p>
-                            <p
+                      <tr>
+                        <td>
+                          <NavLink href={`/productDetails/${e.id}`}>
+                            <img
+                              src={e.imgUrl}
                               style={{
-                                color: "red",
-                                cursor: "pointer",
-                                fontSize: 20,
+                                width: "5rem",
+                                height: "5rem",
+                                objectFit: "contain",
                               }}
-                            >
-                              <i className="fas fa-trash smalltrash"></i>
-                            </p>
-                          </td>
-                          <td
-                            className="mt-5"
+                            ></img>
+                          </NavLink>
+                        </td>
+                        <td>
+                          <p>{e.productName}</p>
+                          <p>Price : ${e.price}</p>
+                          <p>Quantity : {e.qnty}</p>
+                          <p
                             style={{
                               color: "red",
                               cursor: "pointer",
                               fontSize: 20,
                             }}
                           >
-                            <i className="fas fa-trash largetrash"></i>
-                          </td>
-                        </tr>
-                      </>
+                            <i className="fas fa-trash smalltrash"></i>
+                          </p>
+                        </td>
+                        <td
+                          className="mt-5"
+                          style={{
+                            color: "red",
+                            cursor: "pointer",
+                            fontSize: 20,
+                          }}
+                        >
+                          <i className="fas fa-trash largetrash"></i>
+                        </td>
+                      </tr>
                     );
                   })}
                   <p className="text-center">Total: $300</p>
