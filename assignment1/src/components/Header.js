@@ -32,7 +32,12 @@ const Header = () => {
             <NavLink href="/" className="text-decoration-none text-light mx-3">
               Product
             </NavLink>
-
+            <NavLink
+              href="/editprofile"
+              className="text-decoration-none text-light mx-3"
+            >
+              Edit Profile
+            </NavLink>
             <NavLink
               href="/login"
               className="text-decoration-none text-light mx-3"

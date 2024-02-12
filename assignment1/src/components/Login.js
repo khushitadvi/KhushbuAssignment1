@@ -71,6 +71,7 @@ const Login = () => {
           localStorage.setItem("user_login", JSON.stringify(userlogin));
 
           history("/");
+          history("/editprofile");
         }
       }
     }

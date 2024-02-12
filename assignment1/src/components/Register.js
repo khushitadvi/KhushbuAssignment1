@@ -15,6 +15,8 @@ const Register = () => {
     email: "",
     date: "",
     password: "",
+    phoneNumber: "",
+    address: "",
   });
 
   const [data, setData] = useState([]);
@@ -37,35 +39,35 @@ const Register = () => {
   const addData = (e) => {
     e.preventDefault();
 
-    const { name, email, date, password } = inpval;
+    const { name, email, date, password, phoneNumber, address } = inpval;
 
     if (name === "") {
-      toast.error(" name field is requred!", {
+      toast.error(" name field is required!", {
         position: "top-center",
       });
     } else if (email === "") {
-      toast.error("email field is requred", {
+      toast.error("email field is required", {
         position: "top-center",
       });
     } else if (!email.includes("@")) {
-      toast.error("plz enter valid email addres", {
+      toast.error("please enter valid email addres", {
         position: "top-center",
       });
     } else if (date === "") {
-      toast.error("date field is requred", {
+      toast.error("date field is required", {
         position: "top-center",
       });
     } else if (password === "") {
-      toast.error("password field is requred", {
+      toast.error("password field is required", {
         position: "top-center",
       });
-    } else if (password.length < 5) {
-      toast.error("password length greater five", {
+    } else if (address === "") {
+      toast.error("address field is required!", {
         position: "top-center",
       });
     } else {
       console.log("data added succesfully");
-      history("/login");
+      history("/");
       localStorage.setItem("useryoutube", JSON.stringify([...data, inpval]));
     }
   };
@@ -108,6 +110,27 @@ const Register = () => {
                   name="password"
                   onChange={getdata}
                   placeholder="Password"
+                />
+              </Form.Group>
+
+              <Form.Group
+                className="mb-3 col-lg-6"
+                controlId="formBasicPassword"
+              >
+                <Form.Control
+                  type="phonenumber"
+                  name="phoneNumber"
+                  onChange={getdata}
+                  placeholder="Phone number"
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+                <Form.Control
+                  type="text"
+                  name="address"
+                  onChange={getdata}
+                  placeholder="Enter Your Address"
                 />
               </Form.Group>
               <Button
