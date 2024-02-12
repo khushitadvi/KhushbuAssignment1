@@ -124,7 +124,7 @@ const Header = () => {
                       </tr>
                     );
                   })}
-                  <p className="text-center">Total: $300</p>
+                  <p className="text-center">Total: $74.97</p>
                 </tbody>
               </Table>
             </div>

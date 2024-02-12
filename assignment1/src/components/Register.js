@@ -74,85 +74,89 @@ const Register = () => {
 
   return (
     <>
-      <div className="container mt-3">
-        <section className="d-flex justify-content-between align-items-center">
-          <SIgn_img />
-          <div className="left_data mt-3 p-3 " style={{ width: "100%" }}>
-            <h3 className="text-center col-lg-6">Sign Up</h3>
-            <Form>
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                <Form.Control
-                  type="text"
-                  name="name"
-                  onChange={getdata}
-                  placeholder="Enter Your Name"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                <Form.Control
-                  type="email"
-                  name="email"
-                  onChange={getdata}
-                  placeholder="Enter email"
-                />
-              </Form.Group>
+      <div className="container mt-3" style={{ display: "flex" }}>
+        <SIgn_img />
+        <div style={{ width: "100%" }}>
+          <h3 style={{ marginLeft: "20%" }}>Sign Up</h3>
 
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                <Form.Control onChange={getdata} name="date" type="date" />
-              </Form.Group>
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <input
+                type="text"
+                name="name"
+                className="form-control"
+                onChange={getdata}
+                placeholder="Enter Your Name"
+                style={{ width: "60%" }}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                onChange={getdata}
+                placeholder="Enter email"
+                style={{ width: "60%" }}
+              />
+            </Form.Group>
 
-              <Form.Group
-                className="mb-3 col-lg-6"
-                controlId="formBasicPassword"
-              >
-                <Form.Control
-                  type="password"
-                  name="password"
-                  onChange={getdata}
-                  placeholder="Password"
-                />
-              </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <input
+                onChange={getdata}
+                name="date"
+                className="form-control"
+                type="date"
+                style={{ width: "60%" }}
+              />
+            </Form.Group>
 
-              <Form.Group
-                className="mb-3 col-lg-6"
-                controlId="formBasicPassword"
-              >
-                <Form.Control
-                  type="phonenumber"
-                  name="phoneNumber"
-                  onChange={getdata}
-                  placeholder="Phone number"
-                />
-              </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <input
+                type="password"
+                name="password"
+                onChange={getdata}
+                className="form-control"
+                placeholder="Password"
+                style={{ width: "60%" }}
+              />
+            </Form.Group>
 
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                <Form.Control
-                  type="text"
-                  name="address"
-                  onChange={getdata}
-                  placeholder="Enter Your Address"
-                />
-              </Form.Group>
-              <Button
-                variant="primary"
-                className="col-lg-6"
-                onClick={addData}
-                style={{ background: "rgb(67, 185, 127)" }}
-                type="submit"
-              >
-                Submit
-              </Button>
-            </Form>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <input
+                type="phonenumber"
+                name="phoneNumber"
+                className="form-control"
+                onChange={getdata}
+                placeholder="Phone number"
+                style={{ width: "60%" }}
+              />
+            </Form.Group>
 
-            <p className="mt-2" style={{ height: "10px", marginLeft: "10%" }}>
-              Already Have an Account
-            </p>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <input
+                type="text"
+                name="address"
+                className="form-control"
+                onChange={getdata}
+                placeholder="Enter Your Address"
+                style={{ width: "60%" }}
+              />
+            </Form.Group>
+            <button className="btnSignup" onClick={addData} type="submit">
+              Submit
+            </button>
+          </Form>
 
-            <NavLink href="/login" style={{ color: "red", marginLeft: "20%" }}>
-              SignIn
-            </NavLink>
-          </div>
-        </section>
+          <p className="mt-2" style={{ height: "10px", marginLeft: "10%" }}>
+            Already Have an Account
+          </p>
+
+          <NavLink href="/login" style={{ color: "red", marginLeft: "20%" }}>
+            SignIn
+          </NavLink>
+        </div>
+
         <ToastContainer />
       </div>
     </>

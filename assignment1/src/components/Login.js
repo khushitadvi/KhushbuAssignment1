@@ -85,37 +85,32 @@ const Login = () => {
           <div className="left_data mt-3 p-3 " style={{ width: "100%" }}>
             <h3 className="text-center col-lg-6">Sign IN</h3>
             <Form>
-              <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                <Form.Control
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <input
                   type="email"
                   name="email"
+                  className="form-control"
+                  style={{ width: "60%" }}
                   onChange={getdata}
                   placeholder="Enter email"
                 />
               </Form.Group>
 
-              <Form.Group
-                className="mb-3 col-lg-6"
-                controlId="formBasicPassword"
-              >
-                <Form.Control
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <input
                   type="password"
                   name="password"
+                  className="form-control"
+                  style={{ width: "60%" }}
                   onChange={getdata}
                   placeholder="Password"
                 />
               </Form.Group>
-              <Button
-                variant="primary"
-                className="col-lg-6"
-                onClick={addData}
-                style={{ background: "rgb(67, 185, 127)" }}
-                type="submit"
-              >
+              <button className="btnSignup" onClick={addData} type="submit">
                 Submit
-              </Button>
+              </button>
             </Form>
-            <p className="mt-2" style={{ height: "10px", marginLeft: "10%" }}>
+            <p className="mt-2" style={{ height: "10px", marginLeft: "15%" }}>
               Don't Have an Account
             </p>
 

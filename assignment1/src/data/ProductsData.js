@@ -8,7 +8,7 @@ const ProductsData = [
     price: 14.99,
     rating: 4.5,
     imgUrl: "1.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const ProductsData = [
     price: 19.99,
     rating: 4.7,
     imgUrl: "2.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   // Men's category
   {
@@ -29,7 +29,7 @@ const ProductsData = [
     price: 39.99,
     rating: 4.4,
     imgUrl: "3.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const ProductsData = [
     price: 24.99,
     rating: 4.6,
     imgUrl: "4.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   // Women's category
   {
@@ -50,7 +50,7 @@ const ProductsData = [
     price: 49.99,
     rating: 4.8,
     imgUrl: "5.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const ProductsData = [
     price: 29.99,
     rating: 4.5,
     imgUrl: "6.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const ProductsData = [
     price: 29.99,
     rating: 4.5,
     imgUrl: "7.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ const ProductsData = [
     price: 39.99,
     rating: 4.2,
     imgUrl: "8.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   // Men's Category
   {
@@ -92,7 +92,7 @@ const ProductsData = [
     price: 49.99,
     rating: 4.7,
     imgUrl: "9.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 10,
@@ -102,7 +102,7 @@ const ProductsData = [
     price: 34.99,
     rating: 4.4,
     imgUrl: "10.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   // Women's Category
   {
@@ -113,7 +113,7 @@ const ProductsData = [
     price: 39.99,
     rating: 4.6,
     imgUrl: "11.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 12,
@@ -123,7 +123,7 @@ const ProductsData = [
     price: 44.99,
     rating: 4.3,
     imgUrl: "12.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 13,
@@ -133,7 +133,7 @@ const ProductsData = [
     price: 34.99,
     rating: 4.6,
     imgUrl: "13.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 14,
@@ -143,7 +143,7 @@ const ProductsData = [
     price: 29.99,
     rating: 4.6,
     imgUrl: "14.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 15,
@@ -153,7 +153,7 @@ const ProductsData = [
     price: 29.99,
     rating: 4.8,
     imgUrl: "15.jpg",
-    qnty: 0,
+    qnty: 1,
   },
   {
     id: 16,
@@ -163,7 +163,7 @@ const ProductsData = [
     price: 59.99,
     rating: 4.8,
     imgUrl: "16.jpg",
-    qnty: 0,
+    qnty: 1,
   },
 ];
 
